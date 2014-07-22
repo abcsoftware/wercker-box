@@ -4,11 +4,11 @@ version: 0.0.1
 platform: ubuntu@12.04
 type: main
 script: |
-    sudo apt-get update
-    sudo apt-get install -y curl wget git-core build-essential xvfb firefox
-    curl -sL https://deb.nodesource.com/setup | sudo bash -
-    sudo apt-get install nodejs
-    sudo npm install -g npm
-    bash ./cache-deps.sh
-    node -v
-    npm -v
+  sudo apt-get update
+  sudo apt-get install -y curl wget git-core build-essential xvfb firefox
+  curl -sL https://deb.nodesource.com/setup | sudo bash -
+  sudo apt-get install nodejs
+  sudo npm install -g npm
+  bash ./cache-deps.sh
+  node -v
+  npm -v
