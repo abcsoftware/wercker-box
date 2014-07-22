@@ -8,17 +8,14 @@ script: |
     sudo apt-get install -y wget curl git-core build-essential
     sudo apt-get install -y xvfb firefox
 
-    # install nvm
-    git clone https://github.com/creationix/nvm.git ~/.nvm
-    echo 'source ~/.nvm/nvm.sh' >> ~/.bashrc
-    source ~/.nvm/nvm.sh
-
     # install node
-    nvm install v0.10.29
-    nvm use v0.10.29
-    nvm alias default v0.10.29
-    node -v
+    NODE_VER=v0.10.29
+    wget http://nodejs.org/dist/v0.10.29/node-$(NODE_VER)-linux-x64.tar.gz
+    tar -xzf node-$(NODE_VER)-linux-x64.tar.gx
+    pushd node-$(NODE_VER)-linux-x64
+    mv bin/node /usr/local/bin/node
+    mv lib/node_modules /usr/local/lib/node_modules
+    ln -s /usr/local/lib/node_modules/npm/bin/npm /usr/local/bin/npm
 
-    # update npm
-    npm install -g npm
+    node -v
     npm -v
