@@ -9,12 +9,14 @@ script: |
     sudo apt-get install -y xvfb firefox
 
     # install node
-    NODE_VER=v0.10.29
-    wget http://nodejs.org/dist/v0.10.29/node-$(NODE_VER)-linux-x64.tar.gz
-    tar -xzf node-$(NODE_VER)-linux-x64.tar.gx
+    wget http://nodejs.org/dist/v0.10.29/node-$NODE_VER-linux-x64.tar.gz
+    tar -xzf node-$NODE_VER-linux-x64.tar.gx
 
-    pushd node-$(NODE_VER)-linux-x64
+    pushd node-$NODE_VER-linux-x64
     mv bin/node /usr/local/bin/node
     mv lib/node_modules /usr/local/lib/node_modules
     ln -s /usr/local/lib/node_modules/npm/bin/npm /usr/local/bin/npm
     popd
+
+env:
+    NODE_VER: v0.10.29
