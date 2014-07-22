@@ -1,0 +1,8 @@
+name: node
+version: 0.0.0
+platform: ubuntu@12.04
+type: main
+script: |
+    sudo apt-get update
+    sudo apt-get install -y wget curl git-core build-essential
+    sudo apt-get install -y xvfb firefox
