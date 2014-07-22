@@ -15,3 +15,5 @@ script: |
 
     sudo npm install -g npm
     npm -v
+
+    bash ./cache-deps.sh
