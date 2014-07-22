@@ -5,18 +5,13 @@ platform: ubuntu@12.04
 type: main
 script: |
     sudo apt-get update
-    sudo apt-get install -y wget curl git-core build-essential
-    sudo apt-get install -y xvfb firefox
+    sudo apt-get install -y python-software-properties
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
 
-    # install node
-    wget http://nodejs.org/dist/v0.10.29/node-$NODE_VER-linux-x64.tar.gz
-    tar -xzf node-$NODE_VER-linux-x64.tar.gx
+    sudo apt-get install -y wget curl git-core build-essential xvfb firefox nodejs
 
-    pushd node-$NODE_VER-linux-x64
-    mv bin/node /usr/local/bin/node
-    mv lib/node_modules /usr/local/lib/node_modules
-    ln -s /usr/local/lib/node_modules/npm/bin/npm /usr/local/bin/npm
-    popd
+    node -v
 
-env:
-    NODE_VER: v0.10.29
+    sudo npm install -g npm
+    npm -v
