@@ -7,12 +7,6 @@ script: |
     sudo apt-get update
     curl -sL https://deb.nodesource.com/setup | sudo bash -
     sudo apt-get update
-
     sudo apt-get install -y wget curl git-core build-essential xvfb firefox nodejs
-
-    node -v
-
     sudo npm install -g npm
-    npm -v
-
     bash ./cache-deps.sh
