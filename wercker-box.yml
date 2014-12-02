@@ -4,11 +4,13 @@ version: 0.0.2
 platform: ubuntu@12.04
 type: main
 script: |
+  sudo apt-get update
+  sudo apt-get install -y curl wget git-core build-essential
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   curl -sL https://deb.nodesource.com/setup | sudo bash -
   sudo apt-get update
-  sudo apt-get install -y curl wget git-core build-essential xvfb firefox google-chrome-stable nodejs
+  sudo apt-get install -y xvfb firefox google-chrome-stable nodejs
   sudo npm install -g npm
   node -v
   npm -v
