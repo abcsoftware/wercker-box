@@ -1,6 +1,6 @@
 name: abcsoftware-box
 description: Custom wercker box for abcsoftware
-version: 0.0.1
+version: 0.0.2
 platform: ubuntu@12.04
 type: main
 script: |
