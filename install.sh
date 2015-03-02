@@ -9,8 +9,9 @@ apt-get install -y \
     python-all
 
 echo 'Installing Node.js'
-curl -sL https://deb.nodesource.com/setup | bash -
-apt-get install -y nodejs
+curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+nvm install iojs-v1.4.2
+nvm alias default iojs-v1.4.2
 
 echo 'Updating npm'
 npm install -g npm@latest
