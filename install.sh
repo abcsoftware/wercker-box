@@ -11,8 +11,8 @@ apt-get install -y \
 echo 'Installing Node.js'
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 . ~/.nvm/nvm.sh
-nvm install iojs-v1.4.2
-nvm alias default iojs-v1.4.2
+nvm install iojs-v1.4.3
+nvm alias default iojs-v1.4.3
 
 echo 'Updating npm'
 npm install -g npm@latest
