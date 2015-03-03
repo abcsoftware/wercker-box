@@ -1,3 +1,5 @@
+set -e
+
 echo 'Installing core utilities'
 apt-get update
 apt-get install -y \
@@ -27,3 +29,6 @@ curl -sL https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/google.list
 apt-get update
 apt-get install -y google-chrome-stable
+
+echo "Node version $(node -v)"
+echo "NPM version $(npm -v)"
