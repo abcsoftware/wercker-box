@@ -1,5 +1,3 @@
-set -e
-
 echo 'Installing core utilities'
 apt-get update
 apt-get install -y \
